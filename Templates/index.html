@@ -10,8 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'index.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src=" {% static 'index.js' %}"></script>
 </head>
-<body>
+<body ng-app>
     <div class="container">
         <div class="text-center">
             <h1>APA Citations Generator</h1>
@@ -34,7 +36,7 @@
                   <span class="input-group-text">Author Name</span>
                 </div>
                 <input type="text" id="fname" aria-label="First name" class="form-control" placeholder="First Name">
-                <input type="text" id="lanme" aria-label="Last name" class="form-control" placeholder="Last Name">
+                <input type="text" id="lname" aria-label="Last name" class="form-control" placeholder="Last Name">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -43,18 +45,18 @@
                 <input type="text" id="pday" class="form-control" placeholder="Day">
                 <select class="custom-select" id="pmonth">
                   <option selected>Select</option>
-                  <option value="1">January</option>
-                  <option value="2">February</option>
-                  <option value="3">March</option>
-                  <option value="4">April</option>
-                  <option value="5">May</option>
-                  <option value="6">June</option>
-                  <option value="7">July</option>
-                  <option value="8">August</option>
-                  <option value="9">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
                 </select>
                 <input type="text" id="pyear" class="form-control" placeholder="Year">
               </div>
@@ -65,25 +67,32 @@
                 <input type="text" id="aday" class="form-control" placeholder="Day">
                 <select class="custom-select" id="amonth">
                   <option selected>Select</option>
-                  <option value="1">January</option>
-                  <option value="2">February</option>
-                  <option value="3">March</option>
-                  <option value="4">April</option>
-                  <option value="5">May</option>
-                  <option value="6">June</option>
-                  <option value="7">July</option>
-                  <option value="8">August</option>
-                  <option value="9">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
                 </select>
                 <input type="text" id="ayear" class="form-control" placeholder="Year">
               </div>
               <div class="text-center">
-                <button type="button" id="generate" class="btn btn-lg btn-dark">Generate Citation</button>
+                <button onclick = "return generator()" type="button" id="generate" class="btn btn-lg btn-dark">Generate Citation</button>
               </div>
         </div>
     </div>
+    {% verbatim %}
+    <div class="container">
+      <div class="jumbotron">
+        <p id="out">  </p>
+      </div>
+    </div>
+    {% endverbatim %}
 </body>
 </html>
