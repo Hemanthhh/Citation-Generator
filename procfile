@@ -1,0 +1,1 @@
+web: gunicorn citation_generator.wsgi --log-file -
