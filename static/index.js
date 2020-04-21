@@ -34,7 +34,7 @@ function generator(){
     var pdate = pday+" "+pmonth+" "+pyear;
     var adate = aday+" "+amonth+" "+ayear;
 
-    output = fname+" "+lname+" "+pdate+"-"+articleName+" Retrieved on " +adate+" "+ articleLink;
+    output = fname+" "+lname+" "+pdate+"-"+articleName+" Retrieved on " +adate+" from "+ articleLink;
 
     document.getElementById('out').innerHTML = output;
 };
