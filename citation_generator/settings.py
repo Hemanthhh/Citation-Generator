@@ -25,7 +25,8 @@ SECRET_KEY = '3ub*vg3wk0ta91h01@e*kad6wl_n#%xmliw=nd^z50r7ghe9(x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*',
+                 'citationgenerator.herokuapp.com']
 
 
 # Application definition
